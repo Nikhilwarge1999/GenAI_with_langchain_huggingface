@@ -118,3 +118,174 @@ print(''.join(words))
 words = "Hello, World, Python"
 
 print(words.lstrip())
+
+
+# string
+x=lambda x: x**2
+
+print("square is", x(2))
+
+# list
+a=[1,2,3,4,5]
+f=list(map(lambda x:x**2, a))
+print(f)
+
+# how to converthr str to list 
+a="nikhil"
+
+b=a.split(" ")
+print(b)
+
+# reverse string without using for loop
+
+str1 = "Analytics Vidhya"
+str2=""
+for i in str1 :
+    str2= i + str2
+    print(str2)
+
+# sort list
+my_list = [3, 2, 1]
+# my_list.remove()
+my_list.pop(1)
+print(my_list)
+
+import numpy as np
+
+arr1= np.array([1,2,3,4,5])
+print(type(arr1))
+arr2= arr1[::-1]
+print(arr2)
+print("reverse uing flip method",np.flip(arr1))
+
+print("delete emlement",np.delete(arr1, 2))
+
+lst1 = ['W', 'a', 'w', 'b']
+lst2 = ['e', ' ', 'riting', 'log']
+lis3=[x+y for x, y in zip(lst1, lst2) ]
+#join 2 list by index
+print(lis3)
+
+# square of every element present in the list
+
+lst = [1, 2, 3, 4]
+b=[x**2 for x in lst ]
+print(b)    
+
+lst = [1, 2, 3, 4]
+lst_final = []
+for x in lst:
+    lst_final.append(x * x)
+print(lst_final)
+
+c=[1,2,3,4]
+x=lambda y: y**2, c
+
+c=['a','b','c']
+print(''.join(c))
+
+# remove extra white space using strip()
+
+s = '   Hello, World!   '
+
+print(s.strip())
+
+# prime no or not 
+
+from math import sqrt
+
+def prime_or_not(number):
+    for i in range(2, int(sqrt(number)) + 1):
+        if number % i == 0:
+            return 0
+    return 1
+if prime_or_not(4):
+    print("prime number ")
+else:
+    print("not prime number")
+
+
+
+#  need to check if prime or not 
+
+def prime(num):
+    if num <= 1:  # Check if number is <= 1
+        print("Enter a number greater than 1.")
+        return False
+    
+    # Check divisibility from 2 to sqrt(num)
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False  # Not prime if divisible by i
+    
+    return True  # Prime if no divisors are found
+
+
+# User Input
+# p = int(input("Enter a number: "))
+
+# Check if the number is prime
+# if prime(p):
+    # print(f"{p} is a Prime number.")
+# else:
+    # print(f"{p} is NOT a Prime number.")
+
+
+# how to swap value in variable
+
+a=10
+b=20
+
+a,b =b,a
+print("a",a)
+print("b",b)
+
+# Write a program in Python to return the factorial of a given number using recursion.
+
+def factorial(n):
+    if n== 1 :
+        return n
+    else:
+        #n*(n-1)
+        return n * factorial(n-1)
+print(factorial(5))
+
+# --------------------------------------
+import math
+
+fact=int(input("enter the value"))
+print(math.factorial(fact))
+
+# Write a code to convert a list of characters to a string of characters separated by a comma
+
+li=['a','b','c']
+
+re=','.join(map(str,li))
+print(*li,"this is ")
+
+print(type(re))
+print(type(li))
+
+
+reverse=input("enter any valu")
+# with list
+# new_reverse=int(reverse[::-1])
+# without list
+lis=''
+
+for i in reverse:
+    lis=i+lis
+lis=int(lis)
+print("new reverse is without list i s",lis)
+# print("reverse string is ",new_reverse)
+# print(type(new_reverse))
+print(type(lis))
+
+
+armstrong=input("enter any number ")
+armstrong=armstrong.split(',')
+ 
+y=[x*3 for i in armstrong]
+
+
+
